@@ -4,5 +4,5 @@ Comment=This session logs you into i3 with GNOME session integration
 Exec=gnome-session-i3
 TryExec=i3-gnome
 Type=Application
-DesktopNames=GNOME
+DesktopNames=GNOME-Flashback;GNOME;
 X-Ubuntu-Gettext-Domain=gnome-session-3.0

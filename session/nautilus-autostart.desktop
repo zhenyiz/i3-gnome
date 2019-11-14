@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Hidden=true
+Exec= gsettings set org.gnome.desktop.background show-desktop-icons false
+X-Gnome-Auto-Start=True
+Name=disableGnomeDesktop

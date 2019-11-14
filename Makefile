@@ -11,6 +11,7 @@ PATH_I3_GNOME_DESKTOP = $(PREFIX)/share/applications/i3-gnome.desktop
 PATH_I3_GNOME_SESSION = $(PREFIX)/share/gnome-session/sessions/i3-gnome.session
 PATH_I3_GNOME_XSESSION = $(PREFIX)/share/xsessions/i3-gnome.desktop
 PATH_GNOME_SESSION_I3 = $(PREFIX)/bin/gnome-session-i3
+PATH_DISABLE_GNOME_DESKTOP_AUTOSTART = $(HOME)/.config/autostart/nautilus-autostart.desktop
 
 #
 # Targets
@@ -26,6 +27,7 @@ install:
 	$(INSTALL) -m0644 -D session/i3-gnome.session $(PATH_I3_GNOME_SESSION)
 	$(INSTALL) -m0755 -D session/i3-gnome $(PATH_I3_GNOME)
 	$(INSTALL) -m0755 -D session/gnome-session-i3 $(PATH_GNOME_SESSION_I3)
+	$(INSTALL) -m0664 -D session/nautilus-autostart.desktop $(PATH_DISABLE_GNOME_DESKTOP_AUTOSTART)
 
 
 
@@ -35,6 +37,7 @@ uninstall:
 	rm -f $(PATH_I3_GNOME_SESSION)
 	rm -f $(PATH_I3_GNOME_XSESSION)
 	rm -f $(PATH_GNOME_SESSION_I3)
+	rm -f $(PATH_DISABLE_GNOME_DESKTOP_AUTOSTART)
 
 
 
